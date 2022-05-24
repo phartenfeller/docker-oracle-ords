@@ -150,4 +150,10 @@ Parameter | Description
 
 ## Development
 
+Start interactive Container:
+
+```sh
+docker run --rm -it --entrypoint ash oracle-ords:latest
+```
+
 Please read the [development](docs/development.md) documentation for more info on how to help develop this Docker image.

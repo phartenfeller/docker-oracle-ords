@@ -17,11 +17,15 @@ ENV TZ="GMT" \
 
 WORKDIR ${ORDS_DIR}
 
-COPY ["files/ords-*.zip", "scripts/*", "/tmp/"]
+COPY ["scripts/*", "/tmp/"]
+
+RUN cd /tmp && \
+  wget https://download.oracle.com/otn_software/java/ords/ords-latest.zip && \
+  cd ${ORDS_DIR}
 
 RUN echo "" && \
   unzip /tmp/ords-*.zip ords.war && \
-  rm -rf /tmp/ords-*.zip && \
+  #rm -rf /tmp/ords-*.zip && \
   chmod +x /tmp/docker-run.sh && \
   /tmp/docker-run.sh
 
