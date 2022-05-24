@@ -11,7 +11,8 @@ cd $ORDS_DIR
 if [ -f "$ORDS_CONFIG_FILE" ]
 then
 	echo "$ORDS_CONFIG_FILE found. Running standalone"
-	java -jar ords.war standalone
+	#java -jar ords.war standalone
+	ords --config /opt/ords serve
 else
 	echo "$ORDS_CONFIG_FILE not found. Installing ORDS"
 	echo "Generating ords_params.properties"
@@ -67,7 +68,8 @@ else
 	# cat $PARAM_FILE
 	# echo "*** PARAMFILE END ***"
 
-	java -jar ords.war install simple --parameterFile $PARAM_FILE
+	#java -jar ords.war install simple --parameterFile $PARAM_FILE
+	ords --config /path/to/config install --parameterFile $PARAM_FILE
 fi
 
 

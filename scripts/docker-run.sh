@@ -15,5 +15,6 @@ mv /tmp/config-run-ords.sh $ORDS_DIR/
 # mv /tmp/ords.war $ORDS_DIR/
 
 # Set ORDS config dir
-chmod +x $ORDS_DIR/config-run-ords.sh && \
-java -jar ords.war configdir $APEX_CONFIG_DIR
+chmod +x $ORDS_DIR/config-run-ords.sh 
+#&& \
+#java -jar ords.war configdir $APEX_CONFIG_DIR

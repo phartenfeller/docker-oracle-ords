@@ -1,5 +1,5 @@
 # Original source from https://github.com/lucassampsouza/ords_apex
-FROM openjdk:8-jre-alpine
+FROM openjdk:19-alpine
 LABEL maintainer="Martin DSouza <martin@talkapex.com>"
 
 ENV TZ="GMT" \
